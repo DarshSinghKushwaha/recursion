@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class printdigits {
+public class reverseint {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
@@ -8,7 +8,7 @@ public class printdigits {
         sc.close();
     }
     public static int pd(int num){
-        if (num!=0) {
+        if (num>10) {
         System.out.print(num%10);
         return pd(num/10);
         }

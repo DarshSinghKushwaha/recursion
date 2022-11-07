@@ -12,9 +12,13 @@ public class arm {
         scanner.close();
     }
 public static boolean armstrong(int num) {
-        int n=num,sum=0;
+        int n=num,sum=0,temp=n,dig=0;
+        while (temp>0) {
+            temp=temp/10;
+            dig++;
+        }
         while (n!=0) {                   
-            sum+=Math.pow(n%10,3);
+            sum+=Math.pow(n%10,dig);
             n=n/10;
         }
         if (sum==num) {
