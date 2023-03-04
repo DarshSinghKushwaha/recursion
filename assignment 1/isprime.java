@@ -1,29 +1,36 @@
+
+// PROGRAM TO CHECK IF A NO. IS PRIME OR NOT
 import java.util.Scanner;
 
 public class isprime {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int num=sc.nextInt();
-        if(prime(num,2)){
+        // takes input from user
+        System.out.println("enter no.");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (prime(num, 2)) {
             System.out.println("no. is prime");
-        }
-        else{
+        } else {
             System.out.println("no.is not prime");
         }
         sc.close();
     }
-    public static boolean prime(int num,int i) {
-        if(num>i){
-            if (num%i==0) {
+
+    public static boolean prime(int num, int i) {
+        if (num > i) {
+            // BASE CONDITION
+            if (num % i == 0) {
                 return false;
+            } else if (i == 2) {
+                // CHECKS FOR 3
+                i += 1;
             }
-            else if(i==2){
-                i+=1;
-                }
-                else{
-                    i+=2;
-                }
-                return(prime(num,i));
+            // CHECKS FOR EVERY OTHER ODD NO.
+            else {
+                i += 2;
+            }
+            // RECURSION CALL
+            return (prime(num, i));
         }
         return true;
     }

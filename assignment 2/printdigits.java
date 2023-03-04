@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
-public class reverseint {
+public class printdigits {
     public static void main(String[] args) {
         // takes input from user
         System.out.println("enter no.");
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
-        System.out.println(reverse(num));
+        pd(num);
         sc.close();
     }
-    public static int reverse(int num){
-        if (num>10) {
-        System.out.print(num%10);
+    public static void pd(int num){
+        if (num!=0) {
         // RECURSION CALL
-        return reverse(num/10);
+        pd(num/10);
+        System.out.println(num%10);
         }
-        return num;
+        return;
     }
 }

@@ -1,0 +1,16 @@
+public class ArraySubtraction {
+    public static void main(String[] args) {
+        int[] array1 = {3, 5, 7, 9};
+        int[] array2 = {2, 4, 6, 8};
+        int[] result = new int[array1.length];
+
+        for (int i = 0; i < array1.length; i++) {
+            result[i] = array1[i] - array2[i];
+        }
+
+        System.out.println("Result: ");
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
+    }
+}
